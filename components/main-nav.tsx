@@ -35,7 +35,7 @@ export function MainNav({ items }: MainNavProps) {
                     "flex items-center text-sm font-medium text-muted-foreground",
                     item.disabled && "cursor-not-allowed opacity-80",
                     pathname === item.href &&
-                      "bg-purple-900/40 p-2 text-purple-800 "
+                      "rounded-md bg-purple-400/40  p-2  text-purple-800/80 "
                   )}
                 >
                   {item.title}
