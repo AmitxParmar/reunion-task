@@ -5,6 +5,9 @@ module.exports = {
   darkMode: ["class"],
   content: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}"],
   theme: {
+    gridTemplateColumns: {
+      "auto-fill": "repeat(auto-fill, minmax(200px, 1fr))",
+    },
     container: {
       center: true,
       padding: "2rem",
@@ -20,7 +23,7 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
+          DEFAULT: "#5f22d9",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
