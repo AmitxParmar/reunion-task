@@ -57,8 +57,6 @@ export const PropertiesStateProvider = ({ children }: { children: React.ReactNod
     const [category, setCategory] = useState<string>('Apartment');
     const [error, setError] = useState<Error | null>(null);
 
-
-    console.log('properties check', properties)
     async function fetchProperties() {
         setLoading(true);
         const result = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002,6020&purpose=for-rent&hitsPerPage=25&page=0&lang=en&sort=city-level-score&rentFrequency=monthly&categoryExternalID=${getCategoryId(category)}`)

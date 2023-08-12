@@ -17,13 +17,13 @@ const Filter = () => {
         <span className="font-semibold">New York, USA</span>
       </div>
 
-      <Separator orientation="vertical" />
-      <div className="grid grid-flow-row text-start">
+      <Separator orientation="vertical" className="hidden md:block" />
+      <div className=" hidden grid-flow-row text-start md:grid">
         <SelectDate date={date} setDate={setDate} />
       </div>
 
-      <Separator orientation="vertical" />
-      <div className="grid grid-flow-row text-start">
+      <Separator orientation="vertical" className="hidden md:block" />
+      <div className=" hidden grid-flow-row text-start md:grid">
         <span className="text-sm text-gray-400">Price</span>
         <span className="font-semibold">$500-$1,000</span>
       </div>
@@ -37,8 +37,8 @@ const Filter = () => {
       {/* ----Category Filter---- */}
 
       {/* Search button */}
-      <Separator orientation="vertical" />
-      <div className="grid grid-flow-row text-start">
+      <Separator orientation="vertical" className="hidden md:block" />
+      <div className="hidden grid-flow-row text-start md:grid">
         <Button className="" >
           Search
         </Button>
