@@ -15,7 +15,7 @@ interface MainNavProps {
 
 export function MainNav({ items }: MainNavProps) {
   const pathname = usePathname()
-  console.log(pathname)
+
 
   return (
     <div className="flex gap-6 md:gap-10">
@@ -35,7 +35,7 @@ export function MainNav({ items }: MainNavProps) {
                     "mx-4 flex items-center text-sm font-semibold text-muted-foreground",
                     item.disabled && "cursor-not-allowed opacity-80",
                     pathname === item.href &&
-                      "rounded-md bg-purple-400/40  p-2  text-purple-700/80 "
+                    "rounded-md bg-purple-400/40  p-2  text-purple-700/80 "
                   )}
                 >
                   {item.title}

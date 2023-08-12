@@ -1,15 +1,36 @@
 import React from 'react'
 import { Button } from '../ui/button';
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select"
+import { categoryMappings, useProperties } from '@/hooks/useProperties';
 
-type Props = {
-    [key: string]: number;
-}
 
-const Categories = (props: Props) => {
+const Categories = () => {
+    const { setCategory } = useProperties()
+    const handleCategoryChange = (data: string) => {
+        setCategory(data)
+    }
+
     return (
         <div>
-            <span className="text-sm text-gray-400">Property Type</span>
-            <span className="font-semibold">Land</span>
+            {/* <span className="font-semibold">Land</span> */}
+            <Select onValueChange={handleCategoryChange}>
+                <SelectTrigger >
+                    <SelectValue placeholder="select property type" />
+                </SelectTrigger>
+                <SelectContent className='h-56'>
+                    {Object.keys(categoryMappings).map((category) => (
+                        <SelectItem key={category} value={category}>
+                            {category}
+                        </SelectItem>
+                    ))}
+                </SelectContent>
+            </Select>
         </div>
     )
 }

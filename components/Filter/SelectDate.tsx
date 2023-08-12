@@ -24,7 +24,7 @@ const SelectDate = ({ date, setDate }: ISelectDate) => {
                     <h6 className="text-sm text-gray-400">When</h6>
                     <span className="font-bold">
                         {date ? format(date, "PPP") : "Select Move-In Date"}
-                        <span className='h-fit w-fit bg-primary/10'>
+                        <span className='h-fit w-fit rounded-full bg-primary/10'>
                             <CalendarIcon size={15} className="mx-2 inline bg-primary/10 align-middle" />
                         </span>
 
