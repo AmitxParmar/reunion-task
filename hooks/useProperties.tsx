@@ -1,6 +1,7 @@
 'use client'
 import { baseUrl, fetchApi } from "@/config/apiConfig";
 import { useContext, createContext, useState, useEffect, Dispatch, SetStateAction } from "react";
+import { IProperties } from "@/types/properties.types";
 
 interface PropertyContext {
     setCategory: Dispatch<SetStateAction<string>>

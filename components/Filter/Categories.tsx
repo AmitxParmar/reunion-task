@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { Button } from '../ui/button';
+import React from 'react'
+
 import {
     Select,
     SelectContent,
@@ -18,21 +18,18 @@ const Categories = () => {
     }
 
     return (
-        <div>
-            {/* <span className="font-semibold">Land</span> */}
-            <Select onValueChange={handleCategoryChange}>
-                <SelectTrigger >
-                    <SelectValue placeholder="select property type" />
-                </SelectTrigger>
-                <SelectContent className='h-56'>
-                    {Object.keys(categoryMappings).map((category) => (
-                        <SelectItem key={category} value={category}>
-                            {category}
-                        </SelectItem>
-                    ))}
-                </SelectContent>
-            </Select>
-        </div>
+        <Select onValueChange={handleCategoryChange}>
+            <SelectTrigger >
+                <SelectValue placeholder="select property type" />
+            </SelectTrigger>
+            <SelectContent className='h-56'>
+                {Object.keys(categoryMappings).map((category) => (
+                    <SelectItem key={category} value={category}>
+                        {category}
+                    </SelectItem>
+                ))}
+            </SelectContent>
+        </Select>
     )
 }
 

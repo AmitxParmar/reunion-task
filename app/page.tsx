@@ -2,6 +2,7 @@
 import Filter from "@/components/Filter"
 import PropertyCard from "@/components/PropertyCard"
 import { useProperties } from "@/hooks/useProperties";
+import { IProperties } from "@/types/properties.types";
 
 
 export default function IndexPage() {

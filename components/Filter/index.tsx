@@ -4,7 +4,7 @@ import SelectDate from "./SelectDate"
 import { Separator } from "@/components/ui/separator"
 import { Button } from "../ui/button"
 import Categories from "./Categories"
-import { categoryMappings } from "@/hooks/useProperties"
+
 
 const Filter = () => {
   const [date, setDate] = useState<Date>()

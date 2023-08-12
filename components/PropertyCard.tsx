@@ -2,6 +2,7 @@ import Image from "next/image"
 import React, { memo } from "react"
 import { Separator } from "@radix-ui/react-separator"
 import { BedSingle, Bath, Building } from "lucide-react"
+import { IProperties } from "@/types/properties.types"
 
 const Property = ({ location, rentFrequency, contactName, price, coverPhoto, baths, rooms, area }: IProperties) => {
   
