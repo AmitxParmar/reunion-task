@@ -22,7 +22,7 @@ const Categories = () => {
             <SelectTrigger>
                 <SelectValue placeholder="Apartment" />
             </SelectTrigger>
-            <SelectContent className='h-56'>
+            <SelectContent>
                 {Object.keys(categoryMappings).map((category) => (
                     <SelectItem key={category} value={category}>
                         {category}

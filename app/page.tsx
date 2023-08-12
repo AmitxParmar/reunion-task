@@ -11,7 +11,7 @@ export default function IndexPage() {
   return (
     <section className="container grid min-w-full items-center gap-6 pb-8 pt-6 md:py-10 ">
       <h1 className="text-4xl font-bold">Search properties to rent
-        <span className="mx-6 text-[6px] text-red-500">NOTE: change property type only works for now.</span>
+        <span className="mx-6 text-[6px] text-red-500">NOTE: property type filter only works for now.</span>
       </h1>
       <Filter />
       <div className="grid grid-cols-auto-fill gap-6 ">
