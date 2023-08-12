@@ -6,7 +6,7 @@ module.exports = {
   content: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}"],
   theme: {
     gridTemplateColumns: {
-      "auto-fill": "repeat(auto-fill, minmax(200px, 1fr))",
+      "auto-fill": "repeat(3, minmax(150px, 1fr))",
     },
     container: {
       center: true,

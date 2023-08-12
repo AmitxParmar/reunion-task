@@ -1,5 +1,8 @@
 import Image from "next/image"
-import React from "react"
+import React, { memo } from "react"
+import { Separator } from "@radix-ui/react-separator"
+import { BedSingle, Bath, Building } from "lucide-react"
+
 
 type IProperty = {
   image: string
@@ -7,19 +10,40 @@ type IProperty = {
 
 const Property = ({ image, }: IProperty) => {
   return (
-    <div className="relative mx-auto h-[300px] w-[320px] rounded-md bg-purple-400">
-      <Image className="object-fit relative h-[200px] w-[320px] rounded-t-md" src={image} alt="property image" fill />
-      <div className="grid-cols-3 grid gap-3">
-        <p>Hello</p>
-        <p>Hello</p>
-        <p>Hello</p>
-        <p>Hello</p>
-        <p>Hello</p>
-        <p>Hello</p>
-        <p>Hello</p>
+    <div className="relative h-[350px] w-[320px] rounded-md bg-white duration-500 hover:scale-105 hover:bg-primary/5 hover:shadow-xl">
+      <figure className="relative h-40">
+        <Image priority src={image} className="rounded-t-md object-cover" fill alt="property image" />
+      </figure>
+      <div className="grid-cols-2 grid gap-3 p-6">
+        <div className="grid-cols-3 grid">
+          <div className="text-gray-400">
+            <p className="text-lg font-bold tracking-wide text-primary">$2095<span className="text-xs font-semibold text-gray-400"> /month</span></p>
+          </div>
+          <div className="mt-1">
+            <p className="text-xl font-bold">Palm Harbour</p>
+          </div>
+          <div className="mt-1">
+            <p className="line-clamp-2 text-xs font-semibold tracking-wide text-gray-500">Hathsani road, virmeghmaya nagar society, Savarkundla</p>
+          </div>
+        </div>
+        <Separator className="bg-black text-black" />
+        <div className="flex flex-row justify-between font-sans">
+          <div className="max-w-fit text-xs text-primary">
+            <BedSingle size={16} className="inline" />
+            <span className="align-middle font-normal text-gray-500"> 3 Beds</span>
+          </div>
+          <div className="max-w-fit text-xs text-primary">
+            <Bath size={16} className="inline" />
+            <span className="align-middle font-medium text-gray-500"> 3 Bathrooms</span>
+          </div>
+          <div className="max-w-fit text-xs text-primary">
+            <Building size={16} className="inline" />
+            <span className="align-middle font-medium text-gray-500"> 2x4sqrtft</span>
+          </div>
+        </div>
       </div>
     </div>
   )
 }
 
-export default Property
+export default memo(Property)
