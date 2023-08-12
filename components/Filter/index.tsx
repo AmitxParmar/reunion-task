@@ -1,31 +1,31 @@
 'use client'
-import React from "react"
+import React, { useState } from "react"
+import SelectDate from "./SelectDate"
 import { Separator } from "@/components/ui/separator"
-import { Button } from "./ui/button"
-import { Calendar } from "lucide-react"
+import { Button } from "../ui/button"
 
 const Filter = () => {
-  
+  const [date, setDate] = useState<Date>()
+
   return (
-    <div className="flex h-16 w-full max-w-screen-lg items-center justify-evenly rounded-sm border bg-white p-6 shadow-md">
+    <div className="mx-auto flex h-16 w-full max-w-screen-lg items-center justify-evenly rounded-sm border bg-white p-6 shadow-md">
       <div className="grid grid-flow-row text-start">
         <span className="text-sm text-gray-400">Location</span>
         <span className="font-semibold">New York, USA</span>
       </div>
       <Separator orientation="vertical" />
       <div className="grid grid-flow-row text-start">
-        <span className="text-sm text-gray-400">When</span>
-        <span className="font-semibold">Select Move-In Date</span>
-      </div>
-      <Separator className='' orientation="vertical" />
-      <div className="grid grid-flow-row text-start">
-        <span className="text-sm text-gray-400">Location</span>
-        <span className="font-semibold">New York, USA</span>
+        <SelectDate date={date} setDate={setDate} />
       </div>
       <Separator orientation="vertical" />
       <div className="grid grid-flow-row text-start">
-        <span className="text-sm text-gray-400">Location</span>
-        <span className="font-semibold">New York, USA</span>
+        <span className="text-sm text-gray-400">Price</span>
+        <span className="font-semibold">$500-$1,000</span>
+      </div>
+      <Separator orientation="vertical" />
+      <div className="grid grid-flow-row text-start">
+        <span className="text-sm text-gray-400">Property Type</span>
+        <span className="font-semibold">Land</span>
       </div>
       <Separator orientation="vertical" />
       <div className="grid grid-flow-row text-start">
