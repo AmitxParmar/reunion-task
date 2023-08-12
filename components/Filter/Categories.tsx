@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Button } from '../ui/button';
 import {
     Select,
@@ -12,6 +12,7 @@ import { categoryMappings, useProperties } from '@/hooks/useProperties';
 
 const Categories = () => {
     const { setCategory } = useProperties()
+
     const handleCategoryChange = (data: string) => {
         setCategory(data)
     }
