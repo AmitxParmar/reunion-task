@@ -19,8 +19,8 @@ const Categories = () => {
 
     return (
         <Select onValueChange={handleCategoryChange}>
-            <SelectTrigger >
-                <SelectValue placeholder="select property type" />
+            <SelectTrigger>
+                <SelectValue placeholder="Apartment" />
             </SelectTrigger>
             <SelectContent className='h-56'>
                 {Object.keys(categoryMappings).map((category) => (
