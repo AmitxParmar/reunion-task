@@ -13,7 +13,7 @@ type IProperty = {
 
 const Property = ({ image, address, price, title }: IProperty) => {
   return (
-    <div className="relative h-[350px] w-[320px] rounded-md bg-white duration-500 hover:scale-105 hover:bg-primary/5 hover:shadow-xl">
+    <div className="relative h-[350px] w-[320px] rounded-md bg-white shadow-lg duration-500 hover:scale-105 hover:bg-primary/5 hover:shadow-xl">
       <figure className="relative h-40">
         <Image priority src={image} className="rounded-t-md object-cover" fill alt="property image" />
       </figure>
