@@ -4,6 +4,7 @@ import SelectDate from "./SelectDate"
 import { Separator } from "@/components/ui/separator"
 import { Button } from "../ui/button"
 import Categories from "./Categories"
+import { categoryMappings } from "@/hooks/useProperties"
 
 const Filter = () => {
   const [date, setDate] = useState<Date>()
@@ -27,7 +28,7 @@ const Filter = () => {
       <div className="grid grid-flow-row text-start">
         {/* <span className="text-sm text-gray-400">Property Type</span>
         <span className="font-semibold">Land</span> */}
-        <Categories categories={categoriesMappings} />
+        <Categories categories={categoryMappings} />
       </div>
       <Separator orientation="vertical" />
       <div className="grid grid-flow-row text-start">
